@@ -9,3 +9,5 @@ edition = "2021"
 [dependencies.yew]
 version = "0.21.0"
 features = ["csr"]
+image = "0.24.2"
+gloo = "0.8.0"
