@@ -36,6 +36,9 @@ unsafe code should be kept to an absolute minimum.
 run `trunk serve --open`
 
 ## Write-Up
+I was having a lot of trouble displaying the image. The result I kept getting was the image would flash anytime I would reload the page. The error was that image file 
+was in my dist file. My dist file had an index.html. I had another index.html at the root directory. I pretty much just needed to delete that file and cd into the dist 
+file. Then I went ahead and re-ran trunk and success.
 
 ## Testing
 
