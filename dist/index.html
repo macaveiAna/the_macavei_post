@@ -1,9 +1,25 @@
-<!DOCTYPE html><html lang="en"><head>
-        <meta charset="utf-8">
-        <title>"The Macavei Post"</title>
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>"The Macavei Post"</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        img {
+            max-width: 50%;
+            max-height:50%;
+            margin-left: auto;
+        }
+    </style>
     
-<link rel="preload" href="/the_macavei_post-fa662ca31d795f4c_bg.wasm" as="fetch" type="application/wasm" crossorigin="">
-<link rel="modulepreload" href="/the_macavei_post-fa662ca31d795f4c.js">
+    <link rel="preload" href="/the_macavei_post-fa662ca31d795f4c_bg.wasm" as="fetch" type="application/wasm" crossorigin="">
+    <link rel="modulepreload" href="/the_macavei_post-fa662ca31d795f4c.js">
 
 </head>
     <body>
@@ -11,31 +27,33 @@
         <img src="img/img1.png" alt="Image"> 
 
     
-<script type="module">import init from '/the_macavei_post-fa662ca31d795f4c.js';init('/the_macavei_post-fa662ca31d795f4c_bg.wasm');</script><script>(function () {
-    var protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-    var url = protocol + '//' + window.location.host + '/_trunk/ws';
-    var poll_interval = 5000;
-    var reload_upon_connect = () => {
-        window.setTimeout(
-            () => {
+    <script type="module">import init from '/the_macavei_post-fa662ca31d795f4c.js';init('/the_macavei_post-fa662ca31d795f4c_bg.wasm');</script><script>(function () {
+        var protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+        var url = protocol + '//' + window.location.host + '/_trunk/ws';
+        var poll_interval = 5000;
+        var reload_upon_connect = () => {
+            window.setTimeout(
+                () => {
                 // when we successfully reconnect, we'll force a
                 // reload (since we presumably lost connection to
                 // trunk due to it being killed, so it will have
                 // rebuilt on restart)
-                var ws = new WebSocket(url);
-                ws.onopen = () => window.location.reload();
-                ws.onclose = reload_upon_connect;
-            },
-            poll_interval);
-    };
+                    var ws = new WebSocket(url);
+                    ws.onopen = () => window.location.reload();
+                    ws.onclose = reload_upon_connect;
+                },
+                poll_interval);
+            };
 
-    var ws = new WebSocket(url);
-    ws.onmessage = (ev) => {
-        const msg = JSON.parse(ev.data);
-        if (msg.reload) {
-            window.location.reload();
-        }
-    };
-    ws.onclose = reload_upon_connect;
-})()
-</script></body></html>
+            var ws = new WebSocket(url);
+            ws.onmessage = (ev) => {
+                const msg = JSON.parse(ev.data);
+                if (msg.reload) {
+                    window.location.reload();
+                }
+            };
+            ws.onclose = reload_upon_connect;
+        })()
+    </script>
+</body>
+</html>
