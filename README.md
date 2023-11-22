@@ -40,8 +40,11 @@ I was having a lot of trouble displaying the image. The result I kept getting wa
 was in my dist file. My dist file had an index.html. I had another index.html at the root directory. I pretty much just needed to delete that file and cd into the dist 
 file. Then I went ahead and re-ran trunk and success.
 
+Now I am running into the error of not being able to change the image... And the dist file is copied with a copied index.html. 
+
 ## Testing
 
 ### Resources
 
 https://yew.rs/docs/tutorial 
+https://trunkrs.dev/assets/#images-other-resources
