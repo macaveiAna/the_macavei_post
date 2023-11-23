@@ -31,6 +31,13 @@ project commit history must accurately reflect project development.
 - The project must build using stable Rust, unless otherwise approved. 
 unsafe code should be kept to an absolute minimum.
 
+## SETUP
+`rustup target add wasm32-unknown-unknown`
+`cargo install trunk`
+`cargo add yew-router`
+
+
+
 ## How to Start The Development Server
 
 run `trunk serve --open`
@@ -42,9 +49,12 @@ file. Then I went ahead and re-ran trunk and success.
 
 Now I am running into the error of not being able to change the image... And the dist file is copied with a copied index.html. 
 
+I was having trouble calling my router.rs in main. Turns out, I needed to make sure the yew_router and yew version in the Cargo.toml were the same version. I spent about an hour trying to resolve this (sadly melting).
+
 ## Testing
 
 ### Resources
-
+https://pudding-entertainment.medium.com/rust-building-web-frontend-with-yew-ca7421fe01d4
 https://yew.rs/docs/tutorial 
 https://trunkrs.dev/assets/#images-other-resources
+https://crates.io/crates/yew_router

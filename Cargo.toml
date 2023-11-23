@@ -6,8 +6,7 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-[dependencies.yew]
-version = "0.21.0"
-features = ["csr"]
-image = "0.24.2"
-gloo = "0.8.0"
+log = "0.4.6"
+wasm-logger = "0.2.0"
+yew = { version = "0.18.0", features = ["csr"] }
+yew-router = "0.18.0"
