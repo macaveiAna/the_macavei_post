@@ -1,6 +1,6 @@
 // use crate::pages::{home::Home, about::About};
 
-
+/* 
 use yew::prelude::*;
 use yew_router::prelude::*;
 
@@ -39,3 +39,4 @@ fn app() -> Html {
         
     }
 }
+*/

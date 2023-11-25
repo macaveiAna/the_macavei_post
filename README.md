@@ -31,16 +31,12 @@ project commit history must accurately reflect project development.
 - The project must build using stable Rust, unless otherwise approved. 
 unsafe code should be kept to an absolute minimum.
 
-## SETUP
-`rustup target add wasm32-unknown-unknown`
-`cargo install trunk`
-`cargo add yew-router`
-
 
 
 ## How to Start The Development Server
 
-run `trunk serve --open`
+run `cargo run`
+enter this in url `http://127.0.0.1:8080/`
 
 ## Write-Up
 I was having a lot of trouble displaying the image. The result I kept getting was the image would flash anytime I would reload the page. The error was that image file 
@@ -54,10 +50,10 @@ I was having trouble calling my router.rs in main. Turns out, I needed to make s
 After a certain point, I realized that yew was probably going to be much harder to use to build a blog website, so I moved on to trying out Actix-Web and Handlebars.
 
 
-## Testing
-
 ### Resources
 https://pudding-entertainment.medium.com/rust-building-web-frontend-with-yew-ca7421fe01d4
 https://yew.rs/docs/tutorial 
 https://trunkrs.dev/assets/#images-other-resources
 https://crates.io/crates/yew_router
+
+https://actix.rs/docs/getting-started/

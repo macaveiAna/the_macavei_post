@@ -1,33 +1,28 @@
-//use crate::view::home::Home;
-use yew::prelude::*;
-//use yew_router::prelude::*;
-// use log::info;
-//use router::App;
-//mod pages::home::Home; 
-use actix_web::{web,HttpServer,HttpResponse,App};
-use actix_files::{Files};
-use serde_json::json;
+use actix_files as fs;
+use actix_web::{web, App, HttpServer};
+use fs::Files;
 use handlebars::Handlebars;
+use pages::home::home;
 
-/* 
-// Reference this in main
-#[function_component(App)]
-fn app() -> Html {
-
-    //info!("Starting app...");
-    html! {
-        //<>
-        <h1>{"Hello World!"}</h1>
-       
-        //</>
-        
-    }
+mod pages {
+    pub mod home;
 }
- */
 
 #[actix_web::main]
- fn main() -> std::io::Result<()>
- {
-    
-    //yew::Renderer::<App>::new().render();
+async fn main() -> std::io::Result<()> {
+    let mut hbars = Handlebars::new();
+    hbars
+        .register_templates_directory(".html", "./static/")
+        .unwrap();
+    let hbars_ref = web::Data::new(hbars);
+
+    HttpServer::new(move || {
+        App::new()
+            .app_data(hbars_ref.clone())
+            .service(Files::new("/static", "static").show_files_listing())
+            .route("/", web::get().to(home))
+    })
+    .bind(("127.0.0.1", 8080))?
+    .run()
+    .await
 }

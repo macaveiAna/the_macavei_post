@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>The Macavei Post</title>
+        <!---
+        <link data-trunk rel="sass" href="index.scss" /> 
+        -->
+        <link rel="stylesheet" href="static/css/style.css" type="text/css">
+    </head>
+    <body>
+        <h1>My Personal Blog</h1>
+        <section class="posts"
+            {{#each posts}}
+                <article class="post">
+                    <img src="{{this.img.img1}}" />
+                    <h3>{{this.title}}</h3>
+
+                </article>
+            {{/each}}
+        </section>
+    </body>
+</html>
