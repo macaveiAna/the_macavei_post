@@ -1,7 +1,7 @@
 /**
  * Serves as the starting page of the website
  * 
- */
+
 
 use yew::prelude::*;
 
@@ -21,3 +21,4 @@ pub fn home() -> Html {
 }
 
 
+ */
