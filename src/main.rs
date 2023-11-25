@@ -4,8 +4,12 @@ use yew::prelude::*;
 // use log::info;
 //use router::App;
 //mod pages::home::Home; 
+use actix_web::{web,HttpServer,HttpResponse,App};
+use actix_files::{Files};
+use serde_json::json;
+use handlebars::Handlebars;
 
-
+/* 
 // Reference this in main
 #[function_component(App)]
 fn app() -> Html {
@@ -19,9 +23,11 @@ fn app() -> Html {
         
     }
 }
- 
+ */
 
-fn main() {
-    // wasm_logger::init(wasm_logger::Config::default());
-    yew::Renderer::<App>::new().render();
+#[actix_web::main]
+ fn main() -> std::io::Result<()>
+ {
+    
+    //yew::Renderer::<App>::new().render();
 }
