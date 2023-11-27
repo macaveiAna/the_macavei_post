@@ -57,3 +57,4 @@ https://trunkrs.dev/assets/#images-other-resources
 https://crates.io/crates/yew_router
 
 https://actix.rs/docs/getting-started/
+https://actix.rs/docs/url-dispatch/
