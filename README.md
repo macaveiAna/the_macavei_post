@@ -5,7 +5,7 @@
 ## Project Topic Area: A Personal Blog and Website
 
 ## Project Vision: 
-The Macavei Post is a personal blog and website that aims to be aesthetically designed and user-friendly. The website will have a Home Page featuring a one-line favorite quote for a personalized touch. The website will include an About Me page, a page for my favorite Music, Books and Quotes.
+The Macavei Post is a personal blog and website that aims to be aesthetically designed and user-friendly. The website will have a Home Page featuring a one-line favorite quote for a personalized touch. The website will include an About Me page, a page for my favorite Music, Books, Quotes and Photos.
 
 ## Discussion of Concerns:
 During this project, one concern is the process of transforming the Rust code into a website. I plan to extensively research the existing Rust’s web development tools and frameworks. I might be interested in researching any Rust crates for backend and potentially frontend development. Along with any online tutorials or guides for the learning process of turning the Rust code into a functional website. 
