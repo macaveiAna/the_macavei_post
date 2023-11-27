@@ -1,4 +1,4 @@
-use actix_web::{web, HttpResponse};
+use actix_web::{web, HttpResponse, HttpRequest};
 use handlebars::Handlebars;
 
 pub struct HandleContact;
@@ -11,10 +11,19 @@ impl HandleContact {
     }
 
     // Form submission function
-    pub async fn submit_form() -> HttpResponse {
+    pub async fn submit_form(req: HttpRequest) -> HttpResponse {
+        let data_form= Self::extract_form_data(&req);
+
         //redirect user to a thank-you page
         HttpResponse::SeeOther()
             .append_header((actix_web::http::header::LOCATION, "/thank-you"))
             .finish()
+    }
+
+    fn extract_form_data(req: &HttpRequest) -> FormData{
+
+        FormData {
+            
+        }
     }
 }
