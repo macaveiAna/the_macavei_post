@@ -2,11 +2,12 @@ use actix_files as fs;
 use actix_web::{web, App, HttpServer};
 use fs::Files;
 use handlebars::Handlebars;
-use pages::{home::home, about::HandleAbout};
+use pages::{home::home, about::HandleAbout, music::HandleMusic};
 
 mod pages {
     pub mod home;
     pub mod about;
+    pub mod music;
 }
 
 #[actix_web::main]
@@ -24,6 +25,7 @@ async fn main() -> std::io::Result<()> {
             .route("/", web::get().to(home))
             // New rout for about page
             .route("/about", web::get().to(HandleAbout::about))
+            .route("/music", web::get().to(HandleMusic::music))
     })
     .bind(("127.0.0.1", 8080))?
     .run()

@@ -3,15 +3,34 @@
     <head>
         <meta charset="utf-8" />
         <title>The Macavei Post</title>
-        <!---
-        <link data-trunk rel="sass" href="index.scss" /> 
-        -->
         <link rel="stylesheet" href="static/css/style.css" type="text/css">
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            /* Styling the links */
+            a {
+                margin: 5px; /* Add margin for spacing */
+            }
+
+            /* Style the container to display links horizontally */
+            .links-container {
+                display: flex;
+                flex-direction: row;
+            }
+
+        </style>
     </head>
     <body>
         <h1>The Macavei Post</h1>
         <!--Adding the link to the About Me page-->
-        <p><a href="/about">About Me</a></p>
+        <div class="links-container">
+            <a href="/about">About Me</a>
+            <a href="/music">My Music</a>
+        </div>
         <section class="posts"
             {{#each posts}}
                 <article class="post">
@@ -21,6 +40,5 @@
                 </article>
             {{/each}}
         </section>
-
     </body>
 </html>
