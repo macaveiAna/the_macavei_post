@@ -22,24 +22,37 @@
                 flex-direction: row;
             }
 
+            /* style the image above the links */
+            img {
+                max-width: 30%;
+                height: auto;
+                margin-bottom: 10px;
+            }
+
+            h3 {
+                margin-top: 50px;
+            }
+
         </style>
     </head>
     <body>
         <h1>The Macavei Post</h1>
-        <!--Adding the link to the About Me page-->
+        <img src="/static/img/frontpage.png" alt="Girl working on laptop">
+
         <div class="links-container">
             <a href="/about">About Me</a>
             <a href="/music">My Music</a>
             <a href="/books">My Library</a>
         </div>
+        
+        <!-- This adds the quote from the home page-->
         <section class="posts"
             {{#each posts}}
                 <article class="post">
                     <img src="{{this.img.img1}}" />
-                    <h3>{{this.title}}</h3>
-
+                    <h3>{{this.title}}</h3> 
                 </article>
             {{/each}}
-        </section>
+        </section>  
     </body>
 </html>

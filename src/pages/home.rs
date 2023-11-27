@@ -12,8 +12,6 @@ pub async fn home(hb: web::Data<Handlebars<'_>>) -> HttpResponse {
         "posts": [
             {
                 "title":"I much prefer the sharpest criticism of a single intelligent man to the thoughtless approval of the masses. - Johannes Kepler",
-                "image_path":"/img/img1.png"
-                
             },
         ]
     });
