@@ -49,6 +49,17 @@ I was having trouble calling my router.rs in main. Turns out, I needed to make s
 
 After a certain point, I realized that yew was probably going to be much harder to use to build a blog website, so I moved on to trying out Actix-Web and Handlebars.
 
+I really enjoy building with Actix-web so far. One thing I am working on right now that I am having trouble connecting is that I want to create
+the home page with the ability to navigate to the about me page without using the url. For example, right now the way to access my home page is to enter in this url: 
+http://127.0.0.1:8080/
+And to access the about me page I have to enter this url:
+http://127.0.0.1:8080/about
+I want to be able to click on the home page to navigate instead. 
+
+I was able to figure this out fairly quickly. I just needed to modify the posts.html file to have the link to the about me page.
+
+
+
 
 ### Resources
 https://pudding-entertainment.medium.com/rust-building-web-frontend-with-yew-ca7421fe01d4
