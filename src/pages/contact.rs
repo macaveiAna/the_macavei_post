@@ -15,7 +15,7 @@ impl HandleContact {
 
         //redirect user to a thank-you page
         HttpResponse::SeeOther()
-            .header(actix_web::http::header::LOCATION, "/thank-you")
+            .append_header((actix_web::http::header::LOCATION, "/thank-you"))
             .finish()
     }
 }
