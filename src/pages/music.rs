@@ -16,6 +16,12 @@ impl HandleMusic {
                     "spotify_link": "https://open.spotify.com/track/2AhTppjasVXtLuMGZkoXyV?si=88cbe7efb6f54a3c"
 
                 },
+                {
+                    "name": "In My Blood",
+                    "artist": "Switchfoot",
+                    "spotify_link": "https://open.spotify.com/track/1f7qZrOScGlIcjWpfRrmSI?si=ea59bacea7ed4bbd"
+
+                }
             ] 
         });
         let body =hb.render("music", &music_content).unwrap();

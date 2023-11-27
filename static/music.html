@@ -29,21 +29,13 @@
     <body>
         <h1>Music:</h1>
         <!--<p class="center-text">{{content}}</p> -->
-        <a href="{{spotify_link}}">
-            <iframe style="border-radius:12px" 
-            src="https://open.spotify.com/embed/track/2AhTppjasVXtLuMGZkoXyV?utm_source=generator&theme=0" 
-            width="100%" 
-            height="352" 
-            frameBorder="0" 
-            allowfullscreen="" 
-            allow="autoplay; 
-            clipboard-write; 
-            encrypted-media; 
-            fullscreen; 
-            picture-in-picture" 
-            loading="lazy">
-        </iframe>
+        <a href="{{content.0.spotify_link}}">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2AhTppjasVXtLuMGZkoXyV?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </a>
 
+        <a href="{{content.1.spotify_link}}">
+            <iframe style="border-radius:12px" 
+                src="https://open.spotify.com/embed/track/1f7qZrOScGlIcjWpfRrmSI?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
         </a>
 
