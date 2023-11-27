@@ -3,9 +3,49 @@
 <html>
     <head>
     <title>My Favorite Music</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .center-text {
+            text-align: center;
+            margin: 20px;
+            line-height: 1.5;
+        }
+
+        img {
+            max-width: 30%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+    </style>
+
     </head>
     <body>
         <h1>Music:</h1>
-        <p>{{content}}</p>
+        <!--<p class="center-text">{{content}}</p> -->
+        <a href="{{spotify_link}}">
+            <iframe style="border-radius:12px" 
+            src="https://open.spotify.com/embed/track/2AhTppjasVXtLuMGZkoXyV?utm_source=generator&theme=0" 
+            width="100%" 
+            height="352" 
+            frameBorder="0" 
+            allowfullscreen="" 
+            allow="autoplay; 
+            clipboard-write; 
+            encrypted-media; 
+            fullscreen; 
+            picture-in-picture" 
+            loading="lazy">
+        </iframe>
+
+
+        </a>
+
     </body>
 </html>
