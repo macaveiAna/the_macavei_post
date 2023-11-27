@@ -11,8 +11,9 @@ pub async fn home(hb: web::Data<Handlebars<'_>>) -> HttpResponse {
     let posts = json!({
         "posts": [
             {
-                "title":"My Favorite Books",
+                "title":"I much prefer the sharpest criticism of a single intelligent man to the thoughtless approval of the masses. - Johannes Kepler",
                 "image_path":"/img/img1.png"
+                
             },
         ]
     });
