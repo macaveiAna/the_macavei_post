@@ -2,13 +2,15 @@ use actix_files as fs;
 use actix_web::{web, App, HttpServer};
 use fs::Files;
 use handlebars::Handlebars;
-use pages::{home::home, about::HandleAbout, music::HandleMusic, books::HandleBooks};
+use pages::{home::home, about::HandleAbout, music::HandleMusic, books::HandleBooks, quotes::HandleQuotes, photos::HandlePhotos};
 
 mod pages {
     pub mod home;
     pub mod about;
     pub mod music;
     pub mod books;
+    pub mod quotes;
+    pub mod photos;
 }
 
 #[actix_web::main]
@@ -28,6 +30,8 @@ async fn main() -> std::io::Result<()> {
             .route("/about", web::get().to(HandleAbout::about))
             .route("/music", web::get().to(HandleMusic::music))
             .route("/books", web::get().to(HandleBooks::library))
+            .route("/quotes", web::get().to(HandleQuotes::quotes))
+            .route("/photos", web::get().to(HandlePhotos::photos))
     })
     .bind(("127.0.0.1", 8080))?
     .run()

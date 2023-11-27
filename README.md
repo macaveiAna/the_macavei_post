@@ -59,8 +59,6 @@ I want to be able to click on the home page to navigate instead.
 I was able to figure this out fairly quickly. I just needed to modify the posts.html file to have the link to the about me page.
 
 
-
-
 ### Resources
 https://pudding-entertainment.medium.com/rust-building-web-frontend-with-yew-ca7421fe01d4
 https://yew.rs/docs/tutorial 
