@@ -17,27 +17,47 @@
             line-height: 1.5;
         }
 
-        img {
+        .music-container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .music-item {
             max-width: 30%;
-            height: auto;
             margin-bottom: 10px;
         }
 
+    
     </style>
 
     </head>
     <body>
         <h1>Music:</h1>
         <!--<p class="center-text">{{content}}</p> -->
-        <a href="{{content.0.spotify_link}}">
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2AhTppjasVXtLuMGZkoXyV?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </a>
+        <div class="music-container">
+            <div class="music-item">
+                <a href="{{content.0.spotify_link}}">
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2AhTppjasVXtLuMGZkoXyV?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </a>
+            </div>
 
-        <a href="{{content.1.spotify_link}}">
-            <iframe style="border-radius:12px" 
-                src="https://open.spotify.com/embed/track/1f7qZrOScGlIcjWpfRrmSI?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <div class="music-item">
+            
+                <a href="{{content.1.spotify_link}}">
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3ClVeAl8mEEptUXDJConMo?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-        </a>
+                </a>
+            </div>
+
+            <div class="music-item">
+                <a href="{{content.2.spotify_link}}">
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1f7qZrOScGlIcjWpfRrmSI?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+                </a>
+            </div>
+        </div>
 
     </body>
 </html>

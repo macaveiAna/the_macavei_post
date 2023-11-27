@@ -17,6 +17,11 @@ impl HandleMusic {
 
                 },
                 {
+                    "name": "Meant To Live (Jon Bellion Version)",
+                    "artist": "Jon Bellion",
+                    "spotify_link": "https://open.spotify.com/track/3ClVeAl8mEEptUXDJConMo?si=a72f710e88a44652"
+                },
+                {
                     "name": "In My Blood",
                     "artist": "Switchfoot",
                     "spotify_link": "https://open.spotify.com/track/1f7qZrOScGlIcjWpfRrmSI?si=ea59bacea7ed4bbd"
