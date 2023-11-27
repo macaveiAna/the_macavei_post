@@ -26,7 +26,6 @@ async fn main() -> std::io::Result<()> {
             .app_data(hbars_ref.clone())
             .service(Files::new("/static", "static").show_files_listing())
             .route("/", web::get().to(home))
-            // New rout for about page
             .route("/about", web::get().to(HandleAbout::about))
             .route("/music", web::get().to(HandleMusic::music))
             .route("/books", web::get().to(HandleBooks::library))
