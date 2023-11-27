@@ -7,6 +7,7 @@ pub struct HandleMusic;
 impl HandleMusic {
     pub async fn music(hb: web::Data<Handlebars<'_>>) -> HttpResponse {
         //my logic for the music page
+        // try to find another way to access this content
         let music_content = json!({
             "content": [
                 {
