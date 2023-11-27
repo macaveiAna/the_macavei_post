@@ -12,7 +12,6 @@ impl HandleContact {
 
     // Form submission function
     pub async fn submit_form() -> HttpResponse {
-
         //redirect user to a thank-you page
         HttpResponse::SeeOther()
             .append_header((actix_web::http::header::LOCATION, "/thank-you"))
