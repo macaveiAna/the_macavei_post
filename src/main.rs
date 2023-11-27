@@ -23,7 +23,7 @@ async fn main() -> std::io::Result<()> {
             .service(Files::new("/static", "static").show_files_listing())
             .route("/", web::get().to(home))
             // New rout for about page
-            .rout("/about", web::get().to(HandleAbout::about))
+            .route("/about", web::get().to(HandleAbout::about))
     })
     .bind(("127.0.0.1", 8080))?
     .run()
