@@ -3,8 +3,7 @@ use actix_web::{web, App, HttpServer};
 use fs::Files;
 use handlebars::Handlebars;
 use pages::{home::home, about::HandleAbout, music::HandleMusic, books::HandleBooks, 
-    quotes::HandleQuotes, photos::HandlePhotos, contact::HandleContact};
-
+    quotes::HandleQuotes, photos::HandlePhotos};
 mod pages {
     pub mod home;
     pub mod about;
@@ -12,7 +11,6 @@ mod pages {
     pub mod books;
     pub mod quotes;
     pub mod photos;
-    pub mod contact;
 }
 
 #[actix_web::main]
@@ -33,8 +31,6 @@ async fn main() -> std::io::Result<()> {
             .route("/books", web::get().to(HandleBooks::library))
             .route("/quotes", web::get().to(HandleQuotes::quotes))
             .route("/photos", web::get().to(HandlePhotos::photos))
-            .route("/contact", web::get().to(HandleContact::show_form))
-            .route("/contact", web::post().to(HandleContact::submit_form))
     })
     .bind(("127.0.0.1", 8080))?
     .run()

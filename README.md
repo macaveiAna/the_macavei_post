@@ -56,6 +56,10 @@ I want to be able to click on the home page to navigate instead.
 
 I was able to figure this out fairly quickly. I just needed to modify the posts.html file to have the link to the about me page.
 
+## Testing
+
+I wrote a test case to ensure that the email gets sent in email.rs
+
 
 ### Resources
 https://pudding-entertainment.medium.com/rust-building-web-frontend-with-yew-ca7421fe01d4
@@ -66,3 +70,4 @@ https://crates.io/crates/yew_router
 https://actix.rs/docs/getting-started/
 https://actix.rs/docs/url-dispatch/
 https://www.w3schools.com/css/css_intro.asp
+https://docs.rs/actix-web/latest/actix_web
