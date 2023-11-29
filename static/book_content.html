@@ -1,0 +1,53 @@
+<!-- This file handles the books page content-->
+
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+    <title>{{book_content}}</title>
+    
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .center-text {
+            text-align: center;
+            margin: 20px;
+            line-height: 1.5;
+        }
+
+        .book-container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .book-item {
+            max-width: 30%;
+            margin-bottom: 10px;
+        }
+
+    
+    </style>
+
+
+    </head>
+    <body>
+        <h1>Books:</h1>
+        <div class="book-container">
+        <section class="books">
+            <p class="book-item">{{book_content}}</p>
+            {{#each book_content}}
+            <article class="book">
+                <h3>{{this.name}}</h3>
+                <img src="{{this.image_path}}"/>
+                    <h4>Author: {{this.author}}</h4>
+            </article>
+            {{/each}}
+        </section>
+        </div>
+    </body>
+</html>
