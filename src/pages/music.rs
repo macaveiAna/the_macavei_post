@@ -1,9 +1,16 @@
+/**
+ * src/pages/music.rs
+ * This file handles the music content
+ * 
+*/
+
 use actix_web::{web, HttpResponse};
 use serde_json::json;
 use handlebars::Handlebars;
 
 pub struct HandleMusic;
 
+// A function that handles the list of my favorite songs
 impl HandleMusic {
     pub async fn music(hb: web::Data<Handlebars<'_>>) -> HttpResponse {
         //my logic for the music page

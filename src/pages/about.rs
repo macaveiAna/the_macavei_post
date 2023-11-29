@@ -1,9 +1,16 @@
+/**
+ * src/pages/about.rs
+ * This file handles the about me content
+ * 
+*/
+
 use actix_web::{web, HttpResponse};
 use serde_json::json;
 use handlebars::{Handlebars, html_escape};
 
 pub struct HandleAbout;
 
+// This function holds the information of the about me content
 impl HandleAbout {
     pub async fn about(hb: web::Data<Handlebars<'_>>) -> HttpResponse {
         //my logic for the about page

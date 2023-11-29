@@ -1,4 +1,5 @@
 /*
+ * /src/pages/home.rs
  * Serves as the starting page of the website
  */
 use actix_web::{web, HttpResponse};
@@ -6,7 +7,6 @@ use handlebars::Handlebars;
 use serde_json::json;
 
 // My home function
-
 pub async fn home(hb: web::Data<Handlebars<'_>>) -> HttpResponse {
     let posts = json!({
         "posts": [

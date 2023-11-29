@@ -1,10 +1,15 @@
+/* 
+*  Ana Macavei
+*  CS410P Rust
+*  11/28/2023
+*  This is the file where the main function is run
+*/
 
 use actix_web::{web, App, HttpServer};
 use actix_files::Files;
 use handlebars::Handlebars;
 use pages::{home::home, about::HandleAbout, music::HandleMusic, books::HandleBooks, 
     quotes::HandleQuotes, photos::HandlePhotos};
-
 mod pages {
     pub mod home;
     pub mod about;
@@ -13,7 +18,6 @@ mod pages {
     pub mod quotes;
     pub mod photos;
 }
-
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {

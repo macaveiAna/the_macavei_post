@@ -1,9 +1,16 @@
+/**
+ * src/pages/quotes.rs
+ * This file handles the quotes content
+ * 
+*/
+
 use actix_web::{web, HttpResponse};
 use serde_json::json;
 use handlebars::Handlebars;
 
 pub struct HandleQuotes;
 
+// A function that holds the content of my quotes
 impl HandleQuotes {
     pub async fn quotes(hb: web::Data<Handlebars<'_>>) -> HttpResponse {
         //my logic for the quotes page

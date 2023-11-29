@@ -1,9 +1,16 @@
+/**
+ * src/pages/books.rs
+ * This file handles the books content
+ * 
+*/
+
 use actix_web::{web, HttpResponse};
 use serde_json::json;
 use handlebars::Handlebars;
 
 pub struct HandleBooks;
 
+//A function that encapsulates my book content
 impl HandleBooks {
     pub async fn library(hb: web::Data<Handlebars<'_>>) -> HttpResponse {
         //my logic for the books page
