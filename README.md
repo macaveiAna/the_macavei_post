@@ -58,7 +58,7 @@ I was able to figure this out fairly quickly. I just needed to modify the posts.
 
 ## Testing
 
-I wrote a test case to ensure that the email gets sent in email.rs
+
 
 
 ### Resources

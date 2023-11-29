@@ -6,6 +6,14 @@
     </head>
     <body>
         <h1>Quotes:</h1>
-        <p>{{content}}</p>
+        <section class="quotes">
+            {{#each content}}
+            <article class="quote">
+                <h3>{{this.text}}</h3>
+                <h4>Author: {{this.author}}</h4>
+            </article>
+            {{/each}}
+        </section>
+       
     </body>
 </html>

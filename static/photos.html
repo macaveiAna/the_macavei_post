@@ -3,9 +3,19 @@
 <html>
     <head>
     <title>My Photos</title>
+    <style>
+        .photo {
+            max-width: 200px; 
+            height: auto; 
+        }
+    </style>
     </head>
     <body>
-        <h1>Photos:</h1>
-        <p>{{content}}</p>
+        <h1>Photo:</h1>
+        <section class="photos">
+            {{#each photo_content}}
+            <img src="{{this.image_path}}" alt="Photo" class="photo">
+            {{/each}}
+        </section>
     </body>
 </html>

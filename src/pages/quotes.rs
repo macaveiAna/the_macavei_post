@@ -10,12 +10,12 @@ impl HandleQuotes {
         let quote_content = json!({
             "content": [
                 {
-                    "text": "first quote",
-                    "author": "name"
+                    "text": "If we find ourselves with a desire that nothing in this world can satisfy, the most probable explanation is that we were made for another world.",
+                    "author": "C.S Lewis"
                 },
                 {
-                    "text": "another quote",
-                    "author":"name"
+                    "text": "It's not that I'm so smart, it's just that I stay with problems longer.",
+                    "author":"Albert Einstein"
                 }
             ]
         });
