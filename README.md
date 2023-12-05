@@ -71,3 +71,4 @@ https://actix.rs/docs/getting-started/
 https://actix.rs/docs/url-dispatch/
 https://www.w3schools.com/css/css_intro.asp
 https://docs.rs/actix-web/latest/actix_web
+https://docs.rs/actix-identity/latest/actix_identity/

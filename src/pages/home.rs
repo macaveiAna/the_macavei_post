@@ -19,3 +19,5 @@ pub async fn home(hb: web::Data<Handlebars<'_>>) -> HttpResponse {
     let body = hb.render("posts", &posts).unwrap();
     HttpResponse::Ok().body(body)
 }
+
+#[cfg(test)]

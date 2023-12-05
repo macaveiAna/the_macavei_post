@@ -50,6 +50,12 @@
             <a href="/books">My Library</a>
             <a href="/quotes">Favorite Quotes</a>
             <a href="/photos">Photography</a>
+            <a href="/restricted">Restricted Page</a>
+            {{#if user}}
+                <a href="/logout">Logout</a>
+            {{else}}
+                <a href="/login">Login</a>
+            {{/if}} 
         </div>
         
         <!-- This adds the quote from the home page-->
