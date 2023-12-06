@@ -65,3 +65,26 @@ pub async fn init_pool() -> Result<PgPool, sqlx::Error> {
         .await?;
     Ok(pool)
 }  */
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use actix_web::{test, http, App};
+
+    #[tokio::test]
+    async fn test_home() {
+        //create app
+        let mut app = test::init_service(App::new().route("/", web::get().to(home))).await;
+
+        //send a get request
+        let req = test::TestRequest::get().uri("/").to_request();
+        let res = test::call_service(&mut app, req).await;
+
+        assert_eq!(res.status(), http::StatusCode::OK);
+
+        //check to make sure the home page holds correct contents
+        let body = test::read_body(res).await;
+        assert!(body.windows("I much prefer the sharpest criticism".len())
+            .any(|window| window == "I much prefer the sharpest criticism".len()));
+    }
+}

@@ -56,19 +56,25 @@ I want to be able to click on the home page to navigate instead.
 
 I was able to figure this out fairly quickly. I just needed to modify the posts.html file to have the link to the about me page.
 
+I had an extremely hard time trying to get authentication to work. I was getting a lot of cargo errors. And I ended up just commenting out the 
+code because I almost lost my program and decided it wasn't worth it to have it not run. I wanted to show what I was able to get running. 
+
+While I encountered challenges in getting the authentication part of the code to function, my determination remains unwavering. Despite the 
+current setback, I am committed to continuing the development of this website even after I submit it. I have scheduled dedicated time during 
+the winter break to further refine and troubleshoot the authentication aspect. My goal is to transform this project into a showcase piece that 
+I can proudly highlight in future job opportunities.
+
+
 ## Testing
 
-
+run `Cargo test` to test 
 
 
 ### Resources
-https://pudding-entertainment.medium.com/rust-building-web-frontend-with-yew-ca7421fe01d4
-https://yew.rs/docs/tutorial 
-https://trunkrs.dev/assets/#images-other-resources
-https://crates.io/crates/yew_router
 
 https://actix.rs/docs/getting-started/
 https://actix.rs/docs/url-dispatch/
 https://www.w3schools.com/css/css_intro.asp
 https://docs.rs/actix-web/latest/actix_web
 https://docs.rs/actix-identity/latest/actix_identity/
+https://actix.rs/docs/testing/
