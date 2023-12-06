@@ -85,6 +85,6 @@ mod tests {
         //check to make sure the home page holds correct contents
         let body = test::read_body(res).await;
         assert!(body.windows("I much prefer the sharpest criticism".len())
-            .any(|window| window == "I much prefer the sharpest criticism".len()));
+            .any(|window| window == "I much prefer the sharpest criticism".as_bytes()));
     }
 }

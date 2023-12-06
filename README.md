@@ -59,6 +59,19 @@ I was able to figure this out fairly quickly. I just needed to modify the posts.
 I had an extremely hard time trying to get authentication to work. I was getting a lot of cargo errors. And I ended up just commenting out the 
 code because I almost lost my program and decided it wasn't worth it to have it not run. I wanted to show what I was able to get running. 
 
+I was having a lot of trouble with getting my testing to work out. This was what I kept getting:
+
+running 1 test
+test tests::test_home ... FAILED
+
+failures:
+
+assertion `left == right` failed
+  left: 500
+ right: 200
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
 While I encountered challenges in getting the authentication part of the code to function, my determination remains unwavering. Despite the 
 current setback, I am committed to continuing the development of this website even after I submit it. I have scheduled dedicated time during 
 the winter break to further refine and troubleshoot the authentication aspect. My goal is to transform this project into a showcase piece that 
