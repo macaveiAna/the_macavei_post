@@ -1,12 +1,11 @@
 /**
  * src/pages/quotes.rs
  * This file handles the quotes content
- * 
+ *
 */
-
 use actix_web::{web, HttpResponse};
-use serde_json::json;
 use handlebars::Handlebars;
+use serde_json::json;
 
 pub struct HandleQuotes;
 
@@ -26,7 +25,7 @@ impl HandleQuotes {
                 }
             ]
         });
-        let body =hb.render("quotes", &quote_content).unwrap();
+        let body = hb.render("quotes", &quote_content).unwrap();
         HttpResponse::Ok().body(body)
     }
 }

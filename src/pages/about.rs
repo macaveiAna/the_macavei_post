@@ -1,12 +1,11 @@
 /**
  * src/pages/about.rs
  * This file handles the about me content
- * 
+ *
 */
-
 use actix_web::{web, HttpResponse};
+use handlebars::{html_escape, Handlebars};
 use serde_json::json;
-use handlebars::{Handlebars, html_escape};
 
 pub struct HandleAbout;
 
@@ -27,7 +26,7 @@ impl HandleAbout {
             
             Thank you for joining me on this journey."),
         });
-        let body =hb.render("about", &about_content).unwrap();
+        let body = hb.render("about", &about_content).unwrap();
         HttpResponse::Ok().body(body)
     }
 }
